@@ -78,7 +78,7 @@ function Hack() {
       customer_name: localStorage.getItem('userName'),
       customer_mobile: "7878982321",
       customer_email: localStorage.getItem('userName'),
-      redirect_url: `https://colourtradinghack.com?order_id=${num}&status=success&email=${localStorage.getItem('userName')}`
+      redirect_url: `https://colourhacks.com?order_id=${num}&status=success&email=${localStorage.getItem('userName')}`
     };
     try {
       console.log(`<<<<<mid`)
@@ -143,15 +143,6 @@ function Hack() {
       }
     }
   };
-  useEffect(() => {
-    if (orderId && !isPaymentCompleted) {
-      (`>>>>>>>orderId is >>>>>>>${orderId}`)
-      const interval = setInterval(() => {
-        checkPaymentStatus(); // Check the status every 10 seconds
-      }, 1000);
-      return () => clearInterval(interval); // Cleanup the interval on component unmount
-    }
-  }, [orderId, isPaymentCompleted]);
 
   return (
     <div className='bg-white h-screen flex flex-col p-4 overflow-x-hidden'>
