@@ -32,7 +32,7 @@ function Signup() {
                 email:email,
                 name:userName,
                 password:password,
-                app_name:"colorTradingHack"
+                app_name:"colourHacks"
             }
             const userEntry = await axios.post("https://sattajodileak.com/payment/signup",postData)
             

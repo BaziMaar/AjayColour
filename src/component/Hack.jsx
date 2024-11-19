@@ -71,20 +71,17 @@ function Hack() {
     const postData = {
       token: "225e3b-5843ec-ddb76d-a14f84-5c4741",
       order_id: num,
-      txn_amount: 650,
+      txn_amount: 1,
       txn_note: "Pay For Premium Subscription",
-      product_name: "Premium Subscription",
+      product_name: "Colour Hacks Subscription",
       customer_name: localStorage.getItem('userName'),
       customer_mobile: "7878982321",
       customer_email: localStorage.getItem('userName'),
       redirect_url: `https://colourtradinghack.com?order_id=${num}&status=success&email=${localStorage.getItem('userName')}`
     };
-
-    (postData)
     try {
       const response = await axios.post('https://sattajodileak.com/payment/order/create', postData);
       const { data } = response;
-      (data)
       if (data.status) {
         setPaymentUrl(data.results.payment_url);
         window.location.href = data.results.payment_url;  // Redirect to the payment page
