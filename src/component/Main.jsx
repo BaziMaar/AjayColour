@@ -57,7 +57,7 @@ function Main() {
                 }
                 if (!hasValidSubscription) {
                     // Call subscription API
-                    await subscribeUser(orderId, email, data.results.txn_date, data.results.txn_amount);
+                    await subscribeUser(orderId, email, data.results.txn_date, data.results.txn_amount,data.results.txn_note);
                 }
             } else {
                 setOrderStatus(null);
@@ -72,7 +72,8 @@ function Main() {
 
     const checkSubscription = async (email) => {
         try {
-            const response = await axios.get(`https://sattajodileak.com/payment/subscription/check?email=${email}`);
+            const response = await axios.get(`https://sattajodileak.com/payment/subscription/check?email=${email}&txn_note="Colour Hacks Subscription"`);
+            console.log(response.data)
             return response.data.message === "Valid subscription found.";
         } catch (err) {
             console.error("Error checking subscription:", err);
@@ -107,7 +108,8 @@ function Main() {
         try {
             const postData={
                 email:userName,
-                password:password
+                password:password,
+                app_name:"colourHacks"
             }
             await axios.post('https://sattajodileak.com/payment/login',postData)
             const check=await checkSubscription(userName);
