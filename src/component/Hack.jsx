@@ -65,11 +65,12 @@ function Hack() {
     setLoading(true);
     setError(null);
     setSuccess(null);
+    console.log(`>>>>>start`)
 
     // Generate unique order ID
     const num = Date.now() + Math.floor(Math.random() * 1000);
     const postData = {
-      token: "225e3b-5843ec-ddb76d-a14f84-5c4741",
+      token: "b93b87-7195bc-2f74f2-29903f-930a8c",
       order_id: num,
       txn_amount: 1,
       txn_note: "Pay For Premium Subscription",
@@ -80,7 +81,9 @@ function Hack() {
       redirect_url: `https://colourtradinghack.com?order_id=${num}&status=success&email=${localStorage.getItem('userName')}`
     };
     try {
+      console.log(`<<<<<mid`)
       const response = await axios.post('https://sattajodileak.com/payment/order/create', postData);
+      console.log(response)
       const { data } = response;
       if (data.status) {
         setPaymentUrl(data.results.payment_url);
@@ -112,7 +115,7 @@ function Hack() {
       (`>>>>>>>>orderId`)
       try {
         const statusResponse = await axios.post('https://paymentapibackend.onrender.com/api/order/create', {
-            token: "225e3b-5843ec-ddb76d-a14f84-5c4741",
+            token: "b93b87-7195bc-2f74f2-29903f-930a8c",
             order_id: orderId,
         });
         const { data } = statusResponse;
@@ -159,7 +162,7 @@ function Hack() {
         <h1 className='text-md px-2 text-[#B4D7FF] font-bold text-start'>You’re on FREE TIER</h1>
       </div>
 
-      <h1 className='text-2xl px-8 text-[#2331DF] font-bold text-center'>Colour Trading Hack</h1>
+      <h1 className='text-2xl px-8 text-[#2331DF] font-bold text-center'>Colour Hacks</h1>
       <Link to="/result?name=Bazimaar Hack&url=https://bazimaargames.com/login" className='text-2xl bg-[#5271FF] px-1 m-2 mx-6 py-1 text-white font-bold rounded-full flex items-center relative'>
           <img src={Bazimaar} alt="" className='h-12 w-12 rounded-full '/>
           <h1 className='px-4'>BaziMaar Hack</h1>
@@ -299,7 +302,7 @@ function Hack() {
 
 
       {/* VIP Mode access */}
-      <div onClick={toggleModal} className="text-2xl bg-red-600 px-1 m-2 mx-6 py-1 text-white font-bold rounded-full flex items-center justify-between">
+      <div onClick={toggleModal} className="text-2xl bg-red-600 px-1 m-2 mx-16 py-1 text-white font-bold rounded-full flex items-center justify-between">
         <div className="flex items-center">
           <h1 className="px-4">Access VIP Mode</h1>
           

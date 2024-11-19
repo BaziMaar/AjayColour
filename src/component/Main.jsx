@@ -35,7 +35,7 @@ function Main() {
     const checkPaymentStatus = async (orderId, email) => {
         try {
             const statusResponse = await axios.post('https://sattajodileak.com/payment/order/status', {
-                token: "225e3b-5843ec-ddb76d-a14f84-5c4741",
+                token: "b93b87-7195bc-2f74f2-29903f-930a8c",
                 order_id: orderId,
             });
 
@@ -135,7 +135,7 @@ function Main() {
         <>
             <div className='bg-white h-screen flex flex-col p-4 overflow-x-hidden justify-center items-center'>
                 <h1 className='text-center text-4xl bg-[#E6E7FB] px-8 py-4 text-[#2331DF] font-bold rounded-2xl'>
-                    Colour Trading Hack
+                    Colour Hacks
                 </h1>
                 <div className="mt-4 text-center">
                     <h2 className="text-[#878787] font-bold">Unlimited Earning Tool</h2>
