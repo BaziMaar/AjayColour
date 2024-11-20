@@ -72,7 +72,7 @@ function Main() {
 
     const checkSubscription = async (email) => {
         try {
-            const response = await axios.get(`https://sattajodileak.com/payment/subscription/check?email=${email}&txn_note="Colour Hacks Subscription"`);
+            const response = await axios.get(`https://sattajodileak.com/payment/subscription/check?email=${email}&txn_note=Colour Hacks Subscription`);
             console.log(response.data)
             return response.data.message === "Valid subscription found.";
         } catch (err) {
