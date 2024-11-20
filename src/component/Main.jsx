@@ -81,13 +81,14 @@ function Main() {
         }
     };
 
-    const subscribeUser = async (orderId, email, txnDate, txnAmount) => {
+    const subscribeUser = async (orderId, email, txnDate, txnAmount,txn_note) => {
         try {
             const response = await axios.post('https://sattajodileak.com/payment/subscribe', {
                 order_id: orderId,
                 customer_email: email,
                 txn_date: txnDate,
                 txn_amount: txnAmount,
+                txn_note:txn_note
             });
             if (response.data) {
                 alert('Subscription Successful! Your subscription has been activated.Login and Get vip access');
