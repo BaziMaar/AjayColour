@@ -72,8 +72,8 @@ function Hack() {
     const postData = {
       token: "b93b87-7195bc-2f74f2-29903f-930a8c",
       order_id: num,
-      txn_amount: 1,
-      txn_note: "Pay For Premium Subscription",
+      txn_amount: 650,
+      txn_note: "Colour Hacks Subscription",
       product_name: "Colour Hacks Subscription",
       customer_name: localStorage.getItem('userName'),
       customer_mobile: "7878982321",
