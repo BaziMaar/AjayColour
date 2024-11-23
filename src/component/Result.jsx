@@ -84,7 +84,7 @@ function Result() {
     {
     name == "Tiranga Hack" && (
       <div className="text-2xl bg-[#5271FF] px-1 m-2 mx-6 py-1 text-white font-bold rounded-full flex items-center">
-        <img src={img4} alt="" className="h-12 w-12" />
+        <img src={img3} alt="" className="h-12 w-12" />
         <h1 className="px-4">Tiranga Hack</h1>
       </div>
     )
