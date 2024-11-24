@@ -69,7 +69,6 @@ function Hack() {
     setLoading(true);
     setError(null);
     setSuccess(null);
-    console.log(`>>>>>start`)
 
     // Generate unique order ID
     const num = Date.now() + Math.floor(Math.random() * 1000);
@@ -85,9 +84,7 @@ function Hack() {
       redirect_url: `https://colourhacks.com?order_id=${num}&status=success&email=${localStorage.getItem('userName')}`
     };
     try {
-      console.log(`<<<<<mid`)
       const response = await axios.post('https://sattajodileak.com/payment/order/create', postData);
-      console.log(response)
       const { data } = response;
       if (data.status) {
         setPaymentUrl(data.results.payment_url);
@@ -151,11 +148,14 @@ function Hack() {
     const getLinks = async () => {
       try {
         const response = await axios.get('https://sattajodileak.com/payment/get_links');
-        console.log(response.data); // Log the data from the API
-        setWaLink(response.data[1].wa_link)
-        setTlLink(response.data[1].tl_link)
-        setYtLink(response.data[1].yt_link)
-        setPrice(response.data[1].price)
+        for(let i=0;i<response.data.length;i++){
+          if(response.data[i].game_code==2){
+            setWaLink(response.data[i].wa_link)
+            setTlLink(response.data[i].tl_link)
+            setYtLink(response.data[i].yt_link)
+            setPrice(response.data[i].price);
+          }
+        }
       } catch (error) {
         console.error("Error fetching links:", error.message); // Handle errors
       }
