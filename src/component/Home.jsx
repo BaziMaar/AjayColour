@@ -13,6 +13,7 @@ import img10 from '../assets/img10.png'
 import { FaTelegram, FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
 import { RiTelegramLine } from "react-icons/ri";
 import { CiYoutube } from "react-icons/ci";
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function Home() {
