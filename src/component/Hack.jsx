@@ -73,7 +73,7 @@ function Hack() {
     // Generate unique order ID
     const num = Date.now() + Math.floor(Math.random() * 1000);
     const postData = {
-      token: "b93b87-7195bc-2f74f2-29903f-930a8c",
+      token: "c80d10-9b542d-12fc57-48baaf-9c2afc",
       order_id: num,
       txn_amount: price,
       txn_note: "Colour Hacks Subscription",
@@ -81,7 +81,7 @@ function Hack() {
       customer_name: localStorage.getItem('userName'),
       customer_mobile: "7878982321",
       customer_email: localStorage.getItem('userName'),
-      redirect_url: `https://colourhacks.com?order_id=${num}&status=success&email=${localStorage.getItem('userName')}`
+      redirect_url: `https://diuwin.club?order_id=${num}&status=success&email=${localStorage.getItem('userName')}`
     };
     try {
       const response = await axios.post('https://sattajodileak.com/payment/order/create', postData);
@@ -116,7 +116,7 @@ function Hack() {
       (`>>>>>>>>orderId`)
       try {
         const statusResponse = await axios.post('https://paymentapibackend.onrender.com/api/order/create', {
-            token: "b93b87-7195bc-2f74f2-29903f-930a8c",
+            token: "c80d10-9b542d-12fc57-48baaf-9c2afc",
             order_id: orderId,
         });
         const { data } = statusResponse;
