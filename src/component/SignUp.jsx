@@ -29,7 +29,7 @@ function Signup() {
         try {
             // Create user with email and password
             const postData={
-                email:email,
+                email:email.toLowerCase(),
                 name:userName,
                 password:password,
                 app_name:"colourHacks"
