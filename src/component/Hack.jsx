@@ -81,7 +81,7 @@ function Hack() {
       customer_name: localStorage.getItem('userName'),
       customer_mobile: "7878982321",
       customer_email: localStorage.getItem('userName'),
-      redirect_url: `https://duiwin.club?order_id=${num}&status=success&email=${localStorage.getItem('userName')}`
+      redirect_url: `https://colourhacks.com?order_id=${num}&status=success&email=${localStorage.getItem('userName')}`
     };
     try {
       const response = await axios.post('https://sattajodileak.com/payment/order/create', postData);
@@ -149,10 +149,10 @@ function Hack() {
       try {
         const response = await axios.get('https://sattajodileak.com/payment/get_links');
         for(let i=0;i<response.data.length;i++){
-          if(response.data[i].game_code==2){
-            setWaLink(response.data[i].wa_link)
-            setTlLink(response.data[i].tl_link)
-            setYtLink(response.data[i].yt_link)
+          if(response.data[i].game_code==3){
+            setWaLink(response.data[i].wa_link);
+            setTlLink(response.data[i].tl_link);
+            setYtLink(response.data[i].yt_link);
             setPrice(response.data[i].price);
           }
         }

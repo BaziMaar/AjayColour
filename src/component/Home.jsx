@@ -24,8 +24,10 @@ function Home() {
     const getLinks = async () => {
       try {
         const response = await axios.get('https://sattajodileak.com/payment/get_links');
+        console.log(response);
         for(let i=0;i<response.data.length;i++){
-          if(response.data[i].game_code==2){
+          if(response.data[i].game_code==3){
+            console.log(`>>>>>>3`)
             setWaLink(response.data[i].wa_link)
             setTlLink(response.data[i].tl_link)
             setYtLink(response.data[i].yt_link)

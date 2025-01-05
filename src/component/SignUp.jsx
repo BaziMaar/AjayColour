@@ -32,7 +32,7 @@ function Signup() {
                 email:email.toLowerCase(),
                 name:userName,
                 password:password,
-                app_name:"colourHacks"
+                app_name:"colourHackss"
             }
             const userEntry = await axios.post("https://sattajodileak.com/payment/signup",postData)
             
@@ -53,7 +53,7 @@ function Signup() {
             
             <div className="flex justify-center w-full">
                 <h1 className="text-center text-4xl bg-[#E6E7FB] px-8 py-4 text-[#2331DF] font-bold rounded-2xl">
-                    Colour Trading Hack
+                    Colour Hacks
                 </h1>
             </div>
 

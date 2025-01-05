@@ -109,11 +109,10 @@ function Main() {
             const postData={
                 email:userName.toLowerCase(),
                 password:password,
-                app_name:"colourHacks"
+                app_name:"colourHackss"
             }
             await axios.post('https://sattajodileak.com/payment/login',postData)
             const check=await checkSubscription(userName);
-            (`>>>>>>checking>>>>>${check}`);
             if(check){
                 alert('Login Successful! Welcome VIP user back!');
                 navigate('/vip');
@@ -137,7 +136,7 @@ function Main() {
         <>
             <div className='bg-white h-screen flex flex-col p-4 overflow-x-hidden justify-center items-center'>
                 <h1 className='text-center text-4xl bg-[#E6E7FB] px-8 py-4 text-[#2331DF] font-bold rounded-2xl'>
-                    Colour Trading Hack
+                    Colour Hacks
                 </h1>
                 <div className="mt-4 text-center">
                     <h2 className="text-[#878787] font-bold">Unlimited Earning Tool</h2>
