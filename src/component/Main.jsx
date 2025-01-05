@@ -35,7 +35,7 @@ function Main() {
     const checkPaymentStatus = async (orderId, email) => {
         try {
             const statusResponse = await axios.post('https://sattajodileak.com/payment/order/status', {
-                token: "c80d10-9b542d-12fc57-48baaf-9c2afc",
+                token: "b93b87-7195bc-2f74f2-29903f-930a8c",
                 order_id: orderId,
             });
 

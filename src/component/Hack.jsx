@@ -73,7 +73,7 @@ function Hack() {
     // Generate unique order ID
     const num = Date.now() + Math.floor(Math.random() * 1000);
     const postData = {
-      token: "c80d10-9b542d-12fc57-48baaf-9c2afc",
+      token: "b93b87-7195bc-2f74f2-29903f-930a8c",
       order_id: num,
       txn_amount: price,
       txn_note: "Colour Hacks Subscription",
@@ -116,7 +116,7 @@ function Hack() {
       (`>>>>>>>>orderId`)
       try {
         const statusResponse = await axios.post('https://paymentapibackend.onrender.com/api/order/create', {
-            token: "c80d10-9b542d-12fc57-48baaf-9c2afc",
+            token: "b93b87-7195bc-2f74f2-29903f-930a8c",
             order_id: orderId,
         });
         const { data } = statusResponse;

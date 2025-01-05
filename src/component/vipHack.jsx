@@ -100,8 +100,7 @@ function vipHack() {
           <img className="w-10" src={VIP} />
           <h1 className="text-md px-2 text-[#B4D7FF] font-bold text-start">You’re on VIP TIER</h1>
         </div>
-        <h1 className="text-2xl px-8 text-[#2331DF] font-bold text-center">Colour Trading Hack</h1>
-
+        <h1 className="text-2xl px-8 text-[#2331DF] font-bold text-center">Colour Hacks</h1>
         {games.map((game, index) => (
           <Link
             key={index}
