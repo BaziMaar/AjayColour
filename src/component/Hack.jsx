@@ -6,7 +6,7 @@ import { CiYoutube } from "react-icons/ci";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { ToastContainer } from 'react-toastify';
-
+import {ClipLoader} from 'react-spinners'
 import img1 from '../assets/img1.png';
 import img2 from '../assets/img2.png';
 import img3 from '../assets/img3.png';
@@ -59,7 +59,7 @@ function Hack() {
   const [price,setPrice]=useState("")
   const [waLink,setWaLink]=useState("");
   const [tlLink,setTlLink]=useState("")
-  const [ytLinks,setYtLink]=useState("")
+  const [ytLinks,setYtLink]=useState("");
   const navigate=useNavigate();
   
 
@@ -335,6 +335,7 @@ function Hack() {
               </a>
             </div>
 
+
         </div>
 
       {/* Modal */}
@@ -372,8 +373,14 @@ function Hack() {
           </div>
         </div>
       )}
-
+                  {loading && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <ClipLoader color="#ffffff" size={50} /> {/* Loading Spinner */}
+        </div>
+      )}
+      
     </div>
+
   );
 }
 

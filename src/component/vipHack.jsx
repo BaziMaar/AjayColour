@@ -117,6 +117,7 @@ function vipHack() {
         <div className="items-center">
           <img src={vipLogo} alt="vip Logo" className="mr-6 w-3/5 mx-16 m-2 rounded-lg" />
         </div>
+        
 
         <div className="w-80% h-16 m-8 flex justify-center items-center">
           <div className="grid grid-cols-3 gap-3">
